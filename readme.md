@@ -2,6 +2,10 @@
 
 Um Progressive Web App (PWA) que transforma seu pace de corrida em um metrônomo auditivo, ajudando corredores a manter um ritmo consistente durante seus treinos.
 
+Inspirado na ideia do [@mvcmenmendes] (https://www.instagram.com/mvcmendes/) falada no podcast [Área de transferência - 436 : Liquid Dress] (https://gigahertz.fm/podcasts/adt/436).
+
+Feito 100% com IA. 
+
 🔗 **Acesse agora**: [https://running-pace-metronome.vercel.app/](https://running-pace-metronome.vercel.app/)
 
 ## 📱 Sobre o Projeto
@@ -11,7 +15,6 @@ O Running Pace Metronome foi desenvolvido para resolver um problema comum entre 
 ### Por que usar?
 
 - **Melhore sua consistência**: Mantenha um ritmo estável sem precisar olhar o relógio
-- **Treine melhor**: Ideal para treinos de tempo run, intervalados ou corridas longas
 - **Use na esteira**: Veja a conversão instantânea de pace para km/h
 - **100% offline**: Funciona sem internet após o primeiro acesso
 
@@ -19,7 +22,7 @@ O Running Pace Metronome foi desenvolvido para resolver um problema comum entre 
 
 ### Core Features
 - ⏱️ **Conversão inteligente pace → cadência**: Calcula automaticamente os passos por minuto baseado no seu pace
-- 🔊 **Som de pisada realista**: Áudio sintetizado que simula o som de uma pisada
+- 🔊 **Som de pisada realista**: Áudio sintetizado que simula o som de uma pisada (não sei muito bem)
 - ⏲️ **Cronômetro integrado**: Acompanhe a duração do seu treino
 - 💾 **Ritmos favoritos**: Salve e acesse rapidamente seus paces mais usados
 - 📱 **PWA instalável**: Adicione à tela inicial e use como um app nativo
@@ -114,11 +117,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 
 Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👏 Agradecimentos
-
-- Inspirado pela necessidade real de corredores manterem ritmo constante
-- Desenvolvido com foco em performance e usabilidade
-- Agradecimento especial à comunidade de corrida por feedback e sugestões
 
 ---
 
