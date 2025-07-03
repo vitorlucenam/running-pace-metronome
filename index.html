@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>Running Pace Metronome</title>
     <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUnVubmluZyBQYWNlIE1ldHJvbm9tZSIsInNob3J0X25hbWUiOiJQYWNlTWV0cm8iLCJzdGFydF91cmwiOiIvIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzEyMTIxMiIsInRoZW1lX2NvbG9yIjoiIzAwZTVmZiIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQifQ==">
     <style>
@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         body {
@@ -341,11 +343,24 @@
             }
             
             .timer-display {
-                font-size: 36px;
+                font-size: 28px;
             }
             
             .speed-value {
                 font-size: 28px;
+            }
+            
+            .controls-section {
+                padding: 15px;
+            }
+            
+            .visual-metronome {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .metronome-icon {
+                font-size: 24px;
             }
         }
     </style>
@@ -356,7 +371,22 @@
     </div>
 
     <div class="container">
+        <div class="controls-section">
+            <div class="controls-content">
+                <div class="visual-metronome" id="visualMetronome">
+                    <div class="metronome-icon">👟</div>
+                </div>
+                <div class="divider"></div>
+                <div class="timer-display" id="timerDisplay">00:00:00</div>
+            </div>
+        </div>
+
         <div class="pace-input-section">
+            <div class="conversion-info">
+                <div class="speed-value" id="speedDisplay">10.0 km/h</div>
+                <div class="cadence-value" id="cadenceDisplay">Cadência: 170 ppm</div>
+            </div>
+            
             <div class="pace-display">
                 <div class="input-hint" id="inputHint">Digite o pace ou use 650 para 6:50</div>
                 <div class="pace-input-wrapper">
@@ -371,19 +401,6 @@
                 <button class="pace-btn" id="increasePace">+</button>
             </div>
 
-            <div class="conversion-info">
-                <div class="speed-value" id="speedDisplay">10.0 km/h</div>
-                <div class="cadence-value" id="cadenceDisplay">Cadência: 170 ppm</div>
-            </div>
-        </div>
-
-        <div class="controls-section">
-            <div class="visual-metronome" id="visualMetronome">
-                <div class="metronome-icon">👟</div>
-            </div>
-            
-            <div class="timer-display" id="timerDisplay">00:00:00</div>
-            
             <button class="main-button start-btn" id="toggleButton">INICIAR</button>
         </div>
 
@@ -710,6 +727,14 @@
                 adjustPace(-5);
             } else if (e.code === 'ArrowDown') {
                 adjustPace(5);
+            }
+        });
+
+        // Prevent double-tap zoom on buttons
+        document.addEventListener('touchend', function(e) {
+            if (e.target.matches('.pace-btn, .main-button, .save-favorite-btn, .pace-confirm-btn')) {
+                e.preventDefault();
+                e.target.click();
             }
         });
 
