@@ -2,7 +2,7 @@
 
 Um Progressive Web App (PWA) que transforma seu pace de corrida em um metrônomo auditivo, ajudando corredores a manter um ritmo consistente durante seus treinos.
 
-Inspirado na ideia do [@mvcmenmendes] (https://www.instagram.com/mvcmendes/) falada no podcast [Área de transferência - 436 : Liquid Dress] (https://gigahertz.fm/podcasts/adt/436).
+Inspirado na ideia do [@mvcmenmendes](https://www.instagram.com/mvcmendes/) falada no podcast [Área de transferência - 436 : Liquid Dress](https://gigahertz.fm/podcasts/adt/436).
 
 Feito 100% com IA. 
 
